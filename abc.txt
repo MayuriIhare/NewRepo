@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 git command practise
 This is new line
+=======
+git command practiseMaster
+>>>>>>> master
