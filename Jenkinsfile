@@ -3,20 +3,15 @@ pipeline {
          stages {
                  stage('One') {
                  steps {
-                     echo 'Hi, this is Zulaikha from edureka'
+                     echo 'Hi'
                  }
                  }
                  stage('Two') {
                  steps {
-                    input('Do you want to proceed?')
+                    echo 'Mayuri'
                  }
                  }
                  stage('Three') {
-                 when {
-                       not {
-                            branch "master"
-                       }
-                 }
                  steps {
                        echo "Hello"
                  }
@@ -28,13 +23,7 @@ pipeline {
                                 echo "Running the unit test..."
                            }
                            }
-                            stage('Integration test') {
-                              agent {
-                                    docker {
-                                            reuseNode true
-                                            image 'ubuntu'
-                                           }
-                                    }
+                          stage('Integration test') {
                               steps {
                                 echo "Running the integration test..."
                               }
